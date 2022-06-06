@@ -2,11 +2,21 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
+  const handleChange = (e) => {
+    let x = e.target.value;
+    console.log(x)
+  }
+  const submitLogin = () => {
+    
+  }
   return (
     <div>
-      <input data-cy="login-email" />
-      <input data-cy="login-password" />
-      <button data-cy="login-submit"></button>
+      <h1>Login</h1>
+      <input data-cy="login-email" onChange={handleChange} type="text"/>
+      <br />
+      <input data-cy="login-password" onChange={handleChange} type="text"/>
+      <br />
+      <button data-cy="login-submit" onClick={submitLogin}>Login</button>
     </div>
   );
 };
